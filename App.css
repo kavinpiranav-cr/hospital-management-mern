@@ -1,0 +1,194 @@
+/* src/App.css */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  background-color: #f2f6f9;
+  color: #1f2d3d;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.title {
+  text-align: center;
+  color: #0b6e4f;
+  margin-bottom: 16px;
+}
+
+/* ---------- Navigation ---------- */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 0;
+  margin: 0 0 28px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #0b6e4f;
+  background-color: #ffffff;
+  border: 1px solid #0b6e4f;
+  font-weight: 600;
+}
+
+nav a:hover {
+  background-color: #e3f2ec;
+}
+
+nav a.active {
+  background-color: #0b6e4f;
+  color: #ffffff;
+}
+
+/* ---------- Page layout: form on the left, list on the right ---------- */
+.page {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.form-section {
+  flex: 1;
+  min-width: 280px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.list-section {
+  flex: 2;
+}
+
+.form-section h4,
+.list-section h3 {
+  margin-top: 0;
+  color: #0b6e4f;
+}
+
+/* ---------- Form ---------- */
+.form-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.form-section input,
+.form-section select {
+  padding: 9px 10px;
+  margin-bottom: 14px;
+  border: 1px solid #c5d2dc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.form-section input:focus,
+.form-section select:focus {
+  outline: none;
+  border-color: #0b6e4f;
+}
+
+.form-section button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0b6e4f;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form-section button:hover {
+  background-color: #095a41;
+}
+
+.form-section .cancel-btn {
+  margin-top: 8px;
+  background-color: #8a97a3;
+}
+
+.form-section .cancel-btn:hover {
+  background-color: #6f7c88;
+}
+
+/* ---------- Cards ---------- */
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.card {
+  width: calc(50% - 8px);
+  background-color: #ffffff;
+  border-left: 5px solid #0b6e4f;
+  border-radius: 8px;
+  padding: 14px 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.card p {
+  margin: 6px 0;
+}
+
+.card .card-buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.card button {
+  flex: 1;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.card .edit-btn {
+  background-color: #2f80ed;
+}
+
+.card .delete-btn {
+  background-color: #d64545;
+}
+
+.empty {
+  color: #6f7c88;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 768px) {
+  .page {
+    flex-direction: column;
+  }
+
+  .form-section,
+  .list-section {
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
